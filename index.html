@@ -1,20 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BeeWorld</title>
+
+    <!--Open Graphs-->
+    <meta property="og:title" content="BeeWorld" />
+    <meta
+      property="og:description"
+      content="Egy egyszerű pixeles játék amelyben méhecskével kell elkapni 20 virágot és elkerülni a mérgező gombákat és szúros darazsakat."
+    />
+    <meta
+      property="og:image"
+      content="images/og_image.png"
+      alt="BeeWorld felirat, körülötte pixeles méhecske, darázs, virág és gomba."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BeeWorld" />
+
+    <!--CSS-->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!--Köszöntő szöveg és feladatleírás-->
     <div id="text">
-        <h1>BeeWorld</h1>
-    <p>Kapj el 20 db virágot és kerüld el a mérgezett gombákat, valamint a darazsakat.</p>
+      <h1>BeeWorld</h1>
+      <p>
+        Kapj el 20 db virágot és kerüld el a mérgezett gombákat, valamint a
+        darazsakat.
+      </p>
     </div>
-    
+
     <div id="container">
+      <!--Pontok-->
       <div id="scoreboard">
         <div id="score">Pont: 0</div>
+      <!--Szivek-->
         <div id="lives">
           <img src="images/heart.png" alt="A heart icon" class="heart" />
           <img src="images/heart.png" alt="A heart icon" class="heart" />
@@ -22,11 +44,15 @@
         </div>
       </div>
 
+      <!--Méhecske-->
       <div id="bee"></div>
-      <div id="message" class="hidden">Game Over</div>
+      <!--Játék végi szöveg-->
+      <div id="message" class="hidden"></div>
     </div>
+    <!--Újrajátszás gomb-->
     <button id="restart">Újra játszom</button>
 
+    <!--Javascript-->
     <script src="main.js"></script>
   </body>
 </html>

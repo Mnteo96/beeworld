@@ -40,25 +40,20 @@ addEventListener("keydown", (event)=>{
 })
 
 //Méhecske fel-le mozgatása ujjal
-container.addEventListener("touchstart", (event) => {
-    const containerRect = container.getBoundingClientRect();
-    const touchY = event.touches[0].clientY - containerRect.top; 
-    let containerHeight = container.offsetHeight;
+container.addEventListener("touchmove", (event) => {
+    event.preventDefault(); 
 
-    if (touchY < containerHeight / 2) {
-        beeY -= 10;
-    } else {
-        beeY += 10;
-    }
+    let touchY = event.touches[0].clientY;
+    let containerTop = container.getBoundingClientRect().top;
+    let newY = touchY - containerTop - bee.offsetHeight / 2;
 
-    if (beeY < margin) {
-        beeY = margin;
-    } else if (beeY > maxY - margin) {
-        beeY = maxY - margin;
-    }
+    if (newY < margin) newY = margin;
+    if (newY > maxY - margin) newY = maxY - margin;
 
+    beeY = newY;
     bee.style.top = beeY + "px";
-});
+}, { passive: false });
+
 
 //A méhecske szárnycsapkodása
 setInterval(() => {

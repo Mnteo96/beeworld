@@ -24,6 +24,7 @@ document.addEventListener("visibilitychange", () => {
 
 //A méhecske fel-le mozgatása
 addEventListener("keydown", (event)=>{
+    event.preventDefault();
     if(event.key === "ArrowUp"){
         beeY -= 10;
     }else if(event.key === "ArrowDown"){

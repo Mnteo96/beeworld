@@ -9,7 +9,7 @@ body{
 }
 
 #text{
-    margin: 30px 0;
+    margin: 20px 0;
     color: rgb(31, 95, 138);
 }
 
@@ -85,7 +85,7 @@ h1{
 }
 
 button{
-    margin-top: 30px;
+    margin: 30px 0;
     padding: 15px;
     font-size: 1.2rem;
     background-color: rgb(44, 150, 220);
@@ -112,8 +112,13 @@ button{
 
     #text{
     width: 70%;
-    margin: 30px auto;
-}
+    margin: 15px auto;
+    }
+
+    button{
+    margin: 15px 0;
+    }
+
 }
 
 @media(max-width: 310px){
